@@ -13,7 +13,7 @@ def generate_page(from_path, template_path, dest_path, base_path):
     title = extract_title(read_from)
     replace_title = read_temp.replace('{{ Title }}', title)
     replace_html = replace_title.replace('{{ Content }}', string)
-    replace_html = replace_html.replace('href="/"', f'href="{base_path}')
+    replace_html = replace_html.replace('href="/', f'href="{base_path}')
     replace_html = replace_html.replace('src="/', f'src="{base_path}')
 
     directories = os.path.dirname(dest_path)
