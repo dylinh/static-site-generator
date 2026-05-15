@@ -8,7 +8,7 @@ else:
     base_path = "/"
 
 def main():
-    transfer("static", "docs")
-    generate_page_recursive("content", "template.html", "docs", base_path)
+    transfer("./static", "./docs")
+    generate_page_recursive("./content", "template.html", "./docs", base_path)
 
 main()
